@@ -1,1 +1,22 @@
 = https://en.wikipedia.org/wiki/Content_management_system[CMS] with https://docs.asciidoctor.org/asciidoc/latest/[AsciiDoc]
+
+== Tree
+
+----
+.
+├── adoc <1>
+│   ├── index.adoc <2>
+│   └── sub
+│       └── my-post-in-sub.adoc
+├── docs <3>
+│   ├── index.html
+│   └── sub
+│       └── my-post-in-sub.html
+├── Makefile
+├── README.adoc
+└── scripts
+    └── index.sh
+----
+<1> the main folder where you write
+<2> generated automaticly by scripts/index.sh
+<2> generated automaticly by AsciiDoctor
