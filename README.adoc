@@ -26,3 +26,21 @@
 Each subfolder as `sub` of `adoc` is a section of posts.
 
 Just execute a `make`, and then the `html` folder will be create.
+
+== Contributions
+
+* [ ] add a `css` folder
++
+____
+to add a custom theme to the `html` folder
+____
+* [ ] improve the `Makefile`
++
+____
+each time we execute `make` the `index.sh` run and should only if a file in adoc has changed
+____
+* And all others contribution are the welcome
+
+== Issues
+
+* Do not hesitate to ask me any questions
