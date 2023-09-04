@@ -20,3 +20,9 @@
 <1> the main folder where you write
 <2> generated automaticly by scripts/index.sh
 <2> generated automaticly by AsciiDoctor
+
+== How to
+
+Each subfolder as `sub` of `adoc` is a section of posts.
+
+Just execute a `make`, and then the `html` folder will be create.
