@@ -1,0 +1,8 @@
+= My main title
+:nofooter:
+:toc: left
+:sectnums:
+
+== sub
+
+* xref:sub/my-post-in-sub.adoc[my post in sub]
