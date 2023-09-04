@@ -29,6 +29,8 @@ Each subfolder as `sub` of `adoc` is a section of posts.
 
 Just execute a `make`, and then the `html` folder will be create.
 
+If you want use docker instead of installing `asciidoctor`, you can with `make sitedocker`.
+
 == Contributions
 
 * [ ] add a `css` folder

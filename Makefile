@@ -16,6 +16,13 @@ $(DHTML)/%.html: $(DADOC)/%.adoc
 	@mkdir -p $(@D)
 	@$(CADOC) $(<) -o $(@)
 
+sitedocker:
+	docker run \
+	--rm \
+	--volume $(shell pwd):/documents/ \
+	asciidoctor/docker-asciidoctor \
+	make site
+
 re: clean site
 
 clean:
