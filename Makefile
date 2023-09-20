@@ -1,5 +1,5 @@
 DADOC	=	adoc
-DHTML	=	html
+DHTML	=	docs
 
 ADOC	=	$(shell find $(DADOC) -name "*.adoc" -type f)
 NOTADOC	=	$(shell find $(DADOC) ! -name "*.adoc" ! -name ".*" -type f)
