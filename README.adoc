@@ -23,7 +23,7 @@ A very simple CMS
 ----
 <1> the main folder where you write
 <2> generated automaticly by scripts/index.sh
-<2> generated automaticly by AsciiDoctor
+<3> generated automaticly by AsciiDoctor
 
 == How to
 
