@@ -2,12 +2,14 @@ DADOC	=	adoc
 DHTML	=	html
 
 ADOC	=	$(shell find $(DADOC) -name "*.adoc" -type f)
+NOTADOC	=	$(shell find $(DADOC) ! -name "*.adoc" ! -name ".*" -type f)
 
 HTML	=	$(patsubst $(DADOC)/%.adoc, $(DHTML)/%.html, $(ADOC))
+NOTHTML	=	$(patsubst $(DADOC)/%, $(DHTML)/%, $(NOTADOC))
 
 CADOC	=	asciidoctor --require=asciidoctor-diagram
 
-site: index $(HTML)
+site: index $(HTML) copy
 
 index:
 	sh ./scripts/index.sh
@@ -27,3 +29,10 @@ re: clean site
 
 clean:
 	rm -rf $(DHTML)
+
+copy: $(NOTHTML)
+
+# copy extra contents as files or images
+$(DHTML)/%: $(DADOC)/%
+	@mkdir -p $(@D)
+	@cp $(<) $(@)
