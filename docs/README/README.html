@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.20">
-<title>My main title</title>
+<title>CMS with AsciiDoc</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -433,37 +433,115 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 @media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
 </style>
 </head>
-<body class="article toc2 toc-left">
+<body class="article">
 <div id="header">
-<h1>My main title</h1>
-<div id="toc" class="toc2">
-<div id="toctitle">Table of Contents</div>
+<h1><a href="https://en.wikipedia.org/wiki/Content_management_system">CMS</a> with <a href="https://docs.asciidoctor.org/asciidoc/latest/">AsciiDoc</a></h1>
+<div id="toc" class="toc">
+<div id="toctitle"></div>
 <ul class="sectlevel1">
-<li><a href="#_readme">1. README</a></li>
-<li><a href="#_sub">2. sub</a></li>
+<li><a href="#_tree">1. Tree</a></li>
+<li><a href="#_how_to">2. How to</a></li>
+<li><a href="#_contributions">3. Contributions</a></li>
+<li><a href="#_issues">4. Issues</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="_readme">1. README</h2>
+<div id="preamble">
 <div class="sectionbody">
-<div class="ulist">
-<ul>
+<div class="paragraph">
+<p>A very simple CMS</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tree">1. Tree</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre>.
+├── adoc <b class="conum">(1)</b>
+│   ├── index.adoc <b class="conum">(2)</b>
+│   └── sub
+│       └── my-post-in-sub.adoc
+├── docs <b class="conum">(3)</b>
+│   ├── index.html
+│   └── sub
+│       └── my-post-in-sub.html
+├── Makefile
+├── README.adoc
+└── scripts
+    └── index.sh</pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
 <li>
-<p><a href="README/README.html">README</a></p>
+<p>the main folder where you write</p>
+</li>
+<li>
+<p>generated automaticly by scripts/index.sh</p>
+</li>
+<li>
+<p>generated automaticly by AsciiDoctor</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_to">2. How to</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Each subfolder as <code>sub</code> of <code>adoc</code> is a section of posts.</p>
+</div>
+<div class="paragraph">
+<p>Just execute a <code>make</code>, and then the <code>html</code> folder will be create.</p>
+</div>
+<div class="paragraph">
+<p>If you want use docker instead of installing <code>asciidoctor</code>, you can with <code>make sitedocker</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_contributions">3. Contributions</h2>
+<div class="sectionbody">
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p>&#10063; add a <code>css</code> folder</p>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>to add a custom theme to the <code>html</code> folder</p>
+</div>
+</blockquote>
+</div>
+</li>
+<li>
+<p>&#10063; improve the <code>Makefile</code></p>
+<div class="quoteblock">
+<blockquote>
+<div class="paragraph">
+<p>each time we execute <code>make</code> the <code>index.sh</code> run and should only if a file in adoc has changed</p>
+</div>
+</blockquote>
+</div>
+</li>
+<li>
+<p>And all others contribution are the welcome</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_sub">2. sub</h2>
+<h2 id="_issues">4. Issues</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><a href="sub/my-post-in-sub.html">my post in sub</a></p>
+<p>Do not hesitate to ask me any questions</p>
 </li>
 </ul>
 </div>

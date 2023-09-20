@@ -1,0 +1,54 @@
+= https://en.wikipedia.org/wiki/Content_management_system[CMS] with https://docs.asciidoctor.org/asciidoc/latest/[AsciiDoc]
+:toc:
+:toc-title:
+:nofooter:
+:sectnums:
+
+A very simple CMS
+
+== Tree
+
+----
+.
+├── adoc <1>
+│   ├── index.adoc <2>
+│   └── sub
+│       └── my-post-in-sub.adoc
+├── docs <3>
+│   ├── index.html
+│   └── sub
+│       └── my-post-in-sub.html
+├── Makefile
+├── README.adoc
+└── scripts
+    └── index.sh
+----
+<1> the main folder where you write
+<2> generated automaticly by scripts/index.sh
+<3> generated automaticly by AsciiDoctor
+
+== How to
+
+Each subfolder as `sub` of `adoc` is a section of posts.
+
+Just execute a `make`, and then the `html` folder will be create.
+
+If you want use docker instead of installing `asciidoctor`, you can with `make sitedocker`.
+
+== Contributions
+
+* [ ] add a `css` folder
++
+____
+to add a custom theme to the `html` folder
+____
+* [ ] improve the `Makefile`
++
+____
+each time we execute `make` the `index.sh` run and should only if a file in adoc has changed
+____
+* And all others contribution are the welcome
+
+== Issues
+
+* Do not hesitate to ask me any questions

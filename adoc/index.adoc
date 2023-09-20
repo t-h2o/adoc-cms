@@ -3,6 +3,10 @@
 :toc: left
 :sectnums:
 
+== README
+
+* xref:README/README.adoc[README]
+
 == sub
 
 * xref:sub/my-post-in-sub.adoc[my post in sub]
