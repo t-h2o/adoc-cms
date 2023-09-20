@@ -1,6 +1,8 @@
 = https://en.wikipedia.org/wiki/Content_management_system[CMS] with https://docs.asciidoctor.org/asciidoc/latest/[AsciiDoc]
 :toc:
 :toc-title:
+:nofooter:
+:sectnums:
 
 A very simple CMS
 
