@@ -10,7 +10,7 @@ cat > ${FILE_INDEX} << header
 :sectnums:
 header
 
-for SECTION in $(find adoc/* -type d -print)
+for SECTION in $(find adoc/* -maxdepth 0 -type d -print)
 do
 	TITLE=$(basename ${SECTION})
 	cat >> ${FILE_INDEX} <<- section
@@ -18,7 +18,7 @@ do
 	== ${TITLE}
 
 	section
-	for PAGE in $(find adoc/${TITLE} -type f)
+	for PAGE in $(find adoc/${TITLE} -name "*adoc" -type f)
 	do
 		CROSS_REF=$(echo ${PAGE} | sed 's/^adoc\///')
 		POST=$(basename $PAGE | sed 's/\.adoc//' | sed 's/[-_]/ /g')
