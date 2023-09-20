@@ -1,3 +1,6 @@
 = Hey
+:nofooter:
+:toc: left
+:sectnums:
 
 I'm a post
