@@ -11,7 +11,7 @@ site: index $(HTML)
 
 index:
 	sh ./scripts/index.sh
-	
+
 $(DHTML)/%.html: $(DADOC)/%.adoc
 	@mkdir -p $(@D)
 	@$(CADOC) $(<) -o $(@)
